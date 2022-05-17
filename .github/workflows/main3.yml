@@ -2,9 +2,9 @@ name: Docker
 
 on:
   push:
-    # Publish `master` as Docker `latest` image.
-    branches:
-      - master
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   # Run tests.
