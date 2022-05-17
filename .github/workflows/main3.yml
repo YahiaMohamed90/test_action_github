@@ -9,14 +9,14 @@ on:
 jobs:
   # Run tests.
   # See also https://docs.docker.com/docker-hub/builds/automated-testing/
-  test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
 
       - name: build
-        run: docker build -f dockerfile . -t yahia90/gthub_action:v1.10
+        run: docker build -f Dockerfile . -t yahia90/gthub_action:v1.10
         
       - name: login
         run:  |
