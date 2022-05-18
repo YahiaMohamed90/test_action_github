@@ -26,8 +26,6 @@ jobs:
       - name: push
         run:  |
           docker push yahia90/gthub_action:v1.10
-      - name: deploy
-        run:  |
-          docker run -d -p 20:20 yahia90/gthub_action:v1.10
+     
           
 
