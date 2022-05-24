@@ -11,6 +11,6 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.SSH_USERNAME }}
-        KEY: ${{ secrets.PUBLIC_KEY }}
+        KEY: ${{ secrets.PRIVATE_KEY }}
         port: ${{ secrets.PORT }}
         script: mkdir /hoda
