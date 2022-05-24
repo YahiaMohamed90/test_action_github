@@ -15,4 +15,4 @@ jobs:
         PORT: ${{ secrets.PORT }} #default 22
         TARGET: ${{ secrets.TARGET_DIR }}|
         run: |
-               mkdir host
+           mkdir /home/ubuntu/host
