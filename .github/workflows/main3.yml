@@ -11,7 +11,7 @@ on:
      -webhook
 
 jobs:
-  # Run tests.
+  # Run test.
   # See also https://docs.docker.com/docker-hub/builds/automated-testing/
   build:
     runs-on: ubuntu-latest
