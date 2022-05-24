@@ -1,0 +1,16 @@
+name: remote ssh command
+on: [push]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using KEY
+      uses: YahiaMohamed90/test_action_github/.github/workflows/main3.yml@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        KEY: ${{ secrets.PRIVATE_KEY }}
+        port: ${{ secrets.PORT }}
+        script: mkdir hoda
