@@ -32,7 +32,7 @@ jobs:
           docker push yahia90/gthub_action:v1.10
           
       - name: executing remote ssh commands using key
-        uses: test_action_github/@master
+        uses: YaihaMohamed90/test_action_github/@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USERNAME }}
