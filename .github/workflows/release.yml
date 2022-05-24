@@ -9,9 +9,10 @@ jobs:
     - name: executing remote ssh commands using KEY
       uses: actions/checkout@v2
       env:
-        REMOTE_HOST: ${{ secrets.HOST }} # ip-172-31-23-178:
-        REMOTE_USER: ${{ secrets.SSH_USERNAME }} # ubuntu@ip-172-31-23-178
-        SSH_PRIVATE_KEY: ${{ secrets.PUBLIC_KEY }} # key get from this path  ~/.ssh/id_rsa.pub
+        SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }} # ip-172-31-23-178
+        SOURCE: /
+        REMOTE_HOST: ${{ secrets.HOST }} # ubuntu@ip-172-31-23-178
+        REMOTE_USER: ${{ secrets.SSH_USERNAME }} # key get from this path  ~/.ssh/id_rsa.pub
         PORT: ${{ secrets.PORT }} #default 22
         TARGET: ${{ secrets.TARGET_DIR }}
     - name: make dirctory
