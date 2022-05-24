@@ -30,17 +30,9 @@ jobs:
       - name: push
         run:  |
           docker push yahia90/gthub_action:v1.10
-   
-      - name: executing remote ssh commands using key
-      - uses: YahiaMohamed90/test_action_github/.github/workflows/main3.yml@v2
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.PRIVATE_KEY }}
-          port: ${{ secrets.PORT }}
-      - name: directory
-          run:|
-             mkdir hoda
+          
+      
+
           
       
 
