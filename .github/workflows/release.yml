@@ -9,10 +9,10 @@ jobs:
     - name: executing remote ssh commands using KEY
       uses: actions/checkout@v2
       with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.SSH_USERNAME }}
-        KEY: ${{ secrets.PUBLIC_KEY }}
-        host_key: ${{ secrets.HOST_KEY }}
+        host: ${{ secrets.HOST }} # ip-172-31-23-178:
+        username: ${{ secrets.SSH_USERNAME }} # ubuntu@ip-172-31-23-178
+        KEY: ${{ secrets.PUBLIC_KEY }} 
+        key: ${{ secrets.PRIVATE_KEY }}
         port: ${{ secrets.PORT }}
         script: |
              mkdir /hoda
