@@ -14,4 +14,7 @@ jobs:
         SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }} # key get from this path  ~/.ssh/id_rsa.pub
         PORT: ${{ secrets.PORT }} #default 22
         TARGET: ${{ secrets.TARGET_DIR }}|
-        SCRIPT: mkdir host
+    - name: make dirctory
+      run:  mkdir host
+   
+                 
