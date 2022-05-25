@@ -16,6 +16,6 @@ jobs:
         SOURCE: /
         TARGET_DIR: ${{ secrets.TARGET_DIR }}
         run: |    
-            sudo chmod -R 755 /home/ubuntu
+            sudo chmod -R 755 /home/yahia
             sudo mkdir hhhhh
                  
