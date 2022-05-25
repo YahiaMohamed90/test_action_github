@@ -17,5 +17,5 @@ jobs:
         TARGET_DIR: ${{ secrets.TARGET_DIR }}
         run: |    
             sudo chmod -R 755 /home/yahia
-            sudo mkdir hhhhh
+            sudo mkdir /home/yahia/ahmed
                  
