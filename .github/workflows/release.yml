@@ -8,11 +8,11 @@ jobs:
     steps:
     - name: executing remote ssh commands using KEY
       uses: actions/checkout@v2
-      env:
-        SSH_HOST: ${{ secrets.SSH_HOST }} 
-        SSH_USERNAME: ${{ secrets.SSH_USRNAME }} 
-        SSH_KEY: ${{ secrets.SSH_KEY }} 
-        PORT: 22
+      with:
+        host: ${{ secrets.SSH_HOST }} 
+        username: ${{ secrets.SSH_USRNAME }} 
+        key: ${{ secrets.SSH_KEY }} 
+        port: 22
         script: |    
             sudo mkdir /home/yahia/ahmed
                  
