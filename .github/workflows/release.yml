@@ -9,7 +9,7 @@ jobs:
     - name: executing remote ssh commands using KEY
       uses: actions/checkout@v2
       env:
-        PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }} 
+        PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }} 
         HOST: ${{ secrets.HOST }} 
         SSH_USERNAME: ${{ secrets.SSH_USERNAME }} 
         PORT: ${{ secrets.PORT }}
