@@ -16,13 +16,9 @@ jobs:
       with:
           source: "/"
           target: "/home/ubuntu"   
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
-          port: 22
           script: |
+            sudo mkdir hhhhh
             sudo chmod -R 755 /home/ubuntu
             sudo chown -R username:username /home/ubuntu
             sudo setfacl -R -m u:www-data:rwx /home/ubuntu 
-            sudo mkdir please
                  
