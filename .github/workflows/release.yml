@@ -16,6 +16,6 @@ jobs:
         PORT: ${{ secrets.PORT }} #default 22
         TARGET: ${{ secrets.TARGET_DIR }}
     - name: make dirctory
-      run:  mkdir host
+      run: pwd
    
                  
