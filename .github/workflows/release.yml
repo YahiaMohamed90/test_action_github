@@ -17,6 +17,5 @@ jobs:
         TARGET_DIR: ${{ secrets.TARGET_DIR }}
         run: |    
             sudo chmod -R 755 /home/ubuntu
-            sudo chown -R yahia:yahia /home/ubuntu
             sudo mkdir hhhhh
                  
