@@ -17,6 +17,7 @@ jobs:
         TARGET: ${{ secrets.TARGET_DIR }}
     - name: make dirctory
       run: |
-         cd/  echo "::set-output name=result::$(pwd)/n"
+         cd/ 
+         echo "::set-output name=result::$(pwd)/n"
    
                  
