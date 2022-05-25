@@ -13,12 +13,10 @@ jobs:
         SSH_USERNAME: ${{ secrets.SSH_USRNAME }} 
         PORT: 22
         SSH_KEY: ${{ secrets.SSH_KEY }} 
-      with:
-          source: "/"
-          target: "/home/ubuntu"   
-          script: |
-            sudo mkdir hhhhh
+        SOURCE: /
+        TARGET_DIR: ${{ secrets.TARGET_DIR }}
+        run: |    
             sudo chmod -R 755 /home/ubuntu
-            sudo chown -R username:username /home/ubuntu
-            sudo setfacl -R -m u:www-data:rwx /home/ubuntu 
+            sudo chown -R yahia:yahia /home/ubuntu
+            sudo mkdir hhhhh
                  
