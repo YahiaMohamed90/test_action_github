@@ -2,19 +2,27 @@ name: remote ssh command
 on: [push]
 jobs:
 
-  build:
-    name: Build
+  deploy:
+    name: deploy
     runs-on: ubuntu-latest
     steps:
     - name: executing remote ssh commands using KEY
       uses: actions/checkout@v2
       env:
-        PUBLIC_KEY: ${{ secrets.PUBLIC_KEY }} 
-        HOST: ${{ secrets.HOST }} 
-        SSH_USERNAME: ${{ secrets.SSH_USERNAME }} 
-        PORT: ${{ secrets.PORT }}
-        TARGET_DIR: ${{ secrets.TARGET_DIR }}
-    - name: make dirctory
-      run:  mkdir host
-   
+        SSH_HOST: ${{ secrets.SSH_HOST }} 
+        SSH_USERNAME: ${{ secrets.SSH_USRNAME }} 
+        PORT: 22
+        SSH_KEY: ${{ secrets.SSH_KEY }} 
+      with:
+          source: "/"
+          target: "/home/ubuntu"   
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
+          script: |
+            sudo chmod -R 755 /home/ubuntu
+            sudo chown -R username:username /home/ubuntu
+            sudo setfacl -R -m u:www-data:rwx /home/ubuntu 
+            sudo mkdir please
                  
