@@ -21,6 +21,7 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.PRIVATE_KEY }}
         port: 22
+        envs: TARGE_DIR
         script: |  
                 echo " hi "
                 pwd
