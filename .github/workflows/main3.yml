@@ -31,5 +31,24 @@ jobs:
         run:  |
           docker push yahia90/gthub_action:v1.10
           
+      - name: Cheackout the code
+        uses: actions/checkout@v2
+        
+      - name: pass multiple environment
+        uses: actions/checkout@v2
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+          SOURCE: /
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: ${{ secrets.SSH_USER }}
+          TAEGET: ${{ secrets.TARGET_DIR }}
+      - name: pull image 
+        run: |
+         docker pull yahia90/gthub_action:v1.10
+      - name: deploy on server
+        run: |
+         docker run -d -p 3000:3080 yahia90/gthub_action:v1.10
+        
+          
       
 
