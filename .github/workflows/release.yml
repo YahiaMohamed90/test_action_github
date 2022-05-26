@@ -13,6 +13,7 @@ jobs:
           SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
           PORT: 22
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          SOURCE: /
           TARGET_DIR: ${{ secrets.TARGET_DIR }}
      
       with:
