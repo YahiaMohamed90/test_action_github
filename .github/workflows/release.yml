@@ -16,7 +16,8 @@ jobs:
           REMOTE_HOST: ${{ secrets.SSH_HOST }}
           REMOTE_USER: ${{ secrets.SSH_USER }}
           TAEGET: ${{ secrets.TARGET_DIR }}
-          run: |
+      - name: echo
+        run: |
                echo " hi "
             
             
