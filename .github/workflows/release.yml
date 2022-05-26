@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: executing remote ssh commands using KEY
-      uses: appleboy/ssh_action@master
+      uses: actions/checkout@v2
       with:
         host: ip-172-31-22-159.ec2.internal
         username: ubuntu
