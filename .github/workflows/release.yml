@@ -1,29 +1,21 @@
 name: remote ssh command
 on: [push]
 jobs:
-  job_on:
+  deploy:
     name: deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Deploy source-code
-      uses: appleboy/ssh-action@master
+    - name: Cheackout the code
+      uses: actions/checkout@v2
+    - name: Deploy to server
       env:
-          HOST: ${{ secrets.HOST }}
-          SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
-          PORT: 22
-          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-      with:
-          source: "*"
-          target: "/home/ubuntu"
-    - name: commands after deployment
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.PRIVATE_KEY }}
-        port: 22
-        script: |  
-                echo " hi "
-                pwd
-                cd /
+          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+          SOURCE: /
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: ${{ secrets.SSH_USER }}
+          TAEGET: ${{ secrets.TARGET_DIR }}
+          run: |
+               echo " hi "
+            
+            
+                
