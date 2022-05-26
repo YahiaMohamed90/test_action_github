@@ -13,8 +13,11 @@ jobs:
           SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
           PORT: 22
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-      
-      
+      with:
+          source: "*"
+          target: "/home/ubuntu"
+    - name: commands after deployment
+      uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.SSH_USERNAME }}
