@@ -17,11 +17,12 @@ jobs:
           REMOTE_USER: ${{ secrets.SSH_USER }}
           TAEGET: ${{ secrets.TARGET_DIR }}
       - name: echo
-        run: |
+        run: 
                echo " hi "
+      - name: pwd        
+        run: | 
                pwd
-               cd /
-               mkdir hamada 
+              
             
             
                 
