@@ -9,9 +9,9 @@ jobs:
     - name: executing remote ssh commands using KEY
       uses: actions/checkout@v2
       with:
-        host: ip-172-31-22-159.ec2.internal
-        username: ubuntu
-        key: ${{ secrets.PRIVATE_KEY }}
+        HOST_SHH: ${{ secrets.SSH_HOST }} 
+        SSH_USERNAME: ${{ secrets.SSH_USRNAME }} 
+        SSH_KEY: ${{ secrets.SSH_KEY }} 
         port: 22
         script: |  
           whoami
