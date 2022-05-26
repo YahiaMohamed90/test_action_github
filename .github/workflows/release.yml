@@ -24,7 +24,7 @@ jobs:
                pwd
       - name: mkdir       
         run: |        
-              mkdir test
+              mkdir /home/ubuntu/test
       - name: cd       
         run: |  
             cd /
