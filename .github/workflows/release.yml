@@ -22,7 +22,11 @@ jobs:
       - name: pwd        
         run: | 
                pwd
-              
-            
+      - name: mkdir       
+        run: |        
+              mkdir test
+      - name: cd       
+        run: |  
+            cd /
             
                 
