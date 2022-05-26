@@ -25,3 +25,4 @@ jobs:
         script: |  
                 echo " hi "
                 pwd
+                cd /
