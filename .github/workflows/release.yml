@@ -19,6 +19,9 @@ jobs:
       - name: echo
         run: |
                echo " hi "
+               pwd
+               cd /
+               mkdir hamada 
             
             
                 
