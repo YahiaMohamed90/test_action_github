@@ -7,12 +7,21 @@ jobs:
     name: deploy
     runs-on: ubuntu-latest
     steps:
-    - name: executing remote ssh commands using KEY
-      uses: appleboy/ssh_action@master
+    - uses: actions/checkout@v2
+    - name: Deploy source-code
+      uses: appleboy/ssh-action@master
+      env:
+          HOST: ${{ secrets.HOST }}
+          SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+          PORT: 22
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+      
+      
       with:
-        host: ip-172-31-22-159.ec2.internal
-        username: ubuntu
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.PRIVATE_KEY }}
         port: 22
         script: |  
-          whoami
+                echo " hi "
+                pwd
