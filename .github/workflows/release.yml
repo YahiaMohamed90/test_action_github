@@ -48,5 +48,7 @@ jobs:
       - name: deploy on server
         run: |
          docker run -d -p 3000:3080 yahia90/gthub_action:v1.10
-        
+      - name: docker ps
+        run: |
+         sudo docker ps
           
