@@ -52,8 +52,11 @@ jobs:
       - name: docker ps
         run: |
          sudo docker ps
-      - name: pwd
+      - name: make directory
         run: |
-          echo"::set-output name=result::$(pwd)/n"
+         ::set-output name={mkdir}::{mkdir host} 
+         
+      
+        
          
           
