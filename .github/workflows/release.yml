@@ -37,6 +37,7 @@ jobs:
       - name: pass multiple environment
         uses: actions/checkout@v2
         env:
+          PORT: 22
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
           SOURCE: /
           REMOTE_HOST: ${{ secrets.SSH_HOST }}
