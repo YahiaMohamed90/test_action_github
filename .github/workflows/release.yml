@@ -52,4 +52,7 @@ jobs:
       - name: docker ps
         run: |
          sudo docker ps
+      - name: pwd
+        run: |
+             pwd
           
