@@ -54,7 +54,7 @@ jobs:
          sudo docker ps
       - name: make directory
         run: |
-         ::set-output name={mkdir}::{mkdir host} 
+         echo " ::set-output name={mkdir}::{mkdir host} "
          
       
         
