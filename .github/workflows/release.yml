@@ -57,7 +57,7 @@ jobs:
          echo " ::set-output name={mkdir}::{mkdir /home/ubuntu/host} "
       - name: docker state
         run: |
-         sudo docker status
+         sudo docker stats
       
         
          
