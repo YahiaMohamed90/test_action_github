@@ -55,10 +55,7 @@ jobs:
       - name: make directory
         run: |
          echo " ::set-output name={mkdir}::{mkdir /home/ubuntu/host} "
-      - name: docker state
-        run: |
-         sudo docker stats
-      
+  
         
          
           
